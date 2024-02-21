@@ -288,10 +288,31 @@ function EgressRequestList() {
             <div>
                 <div
                     style={{
+                        display: 'flex',
+                        justifyContent: 'flex-end',
+                        alignItems: 'flex-end',
+                        margin: '20px',
+                        flexDirection: 'column',
+                    }}
+                >
+                    <div>
+                        <Typography variant="subtitle1" color="textSecondary">
+                            RITA = Research IT Admin
+                        </Typography>
+                    </div>
+                    <div>
+                        <Typography variant="subtitle1" color="textSecondary">
+                            IGL = Information Governance Lead
+                        </Typography>
+                    </div>
+                </div>
+                <div
+                    style={{
                         height: 400,
                         width: '100%',
                         paddingLeft: '1%',
                         paddingRight: '1%',
+                        marginTop: '50px',
                     }}
                 >
                     <MDBContainer>
