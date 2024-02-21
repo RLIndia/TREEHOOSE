@@ -11,6 +11,7 @@ import { AmplifyAuthenticator, AmplifySignIn } from '@aws-amplify/ui-react';
 import EgressRequestList from './components/egress/EgressRequestList';
 import awsconfig from './aws-config';
 import NavBar from './components/NavBar/navbar';
+import Header from './components/NavBar/header';
 
 Amplify.configure(awsconfig);
 
@@ -38,16 +39,20 @@ function App() {
 
         getUser().then((userData) => setUser(userData));
     }, []);
-
+    // eslint-disable-next-line no-console
+    // console.log(`userData${JSON.stringify(user?.signInUserSession.idToken.payload.email)}`);
     return user ? (
         <div className="App">
             <NavBar />
             <EgressRequestList />
         </div>
     ) : (
-        <AmplifyAuthenticator>
-            <AmplifySignIn slot="sign-in" hideSignUp="true" headerText="Sign In" />
-        </AmplifyAuthenticator>
+        <div>
+            <Header />
+            <AmplifyAuthenticator>
+                <AmplifySignIn slot="sign-in" hideSignUp="true" headerText="Sign In" />
+            </AmplifyAuthenticator>
+        </div>
     );
 }
 
