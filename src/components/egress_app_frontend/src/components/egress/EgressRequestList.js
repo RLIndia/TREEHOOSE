@@ -637,10 +637,10 @@ function EgressRequestList() {
                             <DialogActions>
                                 <Stack direction="row" spacing={2} className="confirmation-buttons">
                                     <Button onClick={handleConfirmationDisagree} color="info" variant="contained">
-                                        No, Take me back
+                                        Cancel
                                     </Button>
                                     <Button onClick={handleConfirmationAgree} color="success" variant="contained">
-                                        Yes I&quot;m sure
+                                        Confirm
                                     </Button>
                                 </Stack>
                             </DialogActions>
